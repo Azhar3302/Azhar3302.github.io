@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azhar | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Azhar<span>.</span></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <p class="eyebrow">Hello, I'm</p>
+    <h1>Your Full Name Here</h1>
+    <h2 class="role">Student &middot; Aspiring Developer</h2>
+    <p class="tagline">
+      Write one or two sentences about who you are and what you're learning.
+      Example: "I'm a student learning web development and I enjoy building
+      small projects that solve real problems."
+    </p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn primary">See my work</a>
+      <a href="#contact" class="btn secondary">Contact me</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h3 class="section-title">About Me</h3>
+    <div class="about-content">
+      <div class="about-photo">
+        <div class="photo-placeholder">Add<br>Photo</div>
+      </div>
+      <div class="about-text">
+        <p>
+          Replace this paragraph with a short introduction: where you study,
+          what you're interested in, and what you hope to build or achieve.
+        </p>
+        <ul class="about-facts">
+          <li><strong>Institution:</strong> Your school / college name</li>
+          <li><strong>Interests:</strong> e.g. Web development, AI, Design</li>
+          <li><strong>Location:</strong> Your city, country</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h3 class="section-title">Skills</h3>
+    <div class="skills-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Git &amp; GitHub</div>
+      <div class="skill-card">Add your own</div>
+      <div class="skill-card">Add your own</div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h3 class="section-title">Projects</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>Project One</h4>
+        <p>Short description of the project — what it does and what you used to build it.</p>
+        <a href="#" target="_blank">View project &rarr;</a>
+      </div>
+      <div class="project-card">
+        <h4>Project Two</h4>
+        <p>Short description of the project — what it does and what you used to build it.</p>
+        <a href="#" target="_blank">View project &rarr;</a>
+      </div>
+      <div class="project-card">
+        <h4>Project Three</h4>
+        <p>Short description of the project — what it does and what you used to build it.</p>
+        <a href="#" target="_blank">View project &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h3 class="section-title">Get In Touch</h3>
+    <p>Feel free to reach out — I'm open to opportunities and collaboration.</p>
+    <div class="contact-links">
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="https://github.com/Azhar3302" target="_blank">GitHub</a>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Your Full Name Here. Built with HTML &amp; CSS.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
