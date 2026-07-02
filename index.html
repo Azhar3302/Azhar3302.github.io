@@ -3,101 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azhar | Portfolio</title>
+<title>Azhar | Academic Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">Azhar<span>.</span></div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero" id="home">
-    <p class="eyebrow">Hello, I'm</p>
-    <h1>Azharul Islam</h1>
-    <h2 class="role">Student &middot; Aspiring Developer</h2>
+  <header class="hero">
+    <p class="eyebrow">Academic Portfolio</p>
+    <h1>Your Full Name Here</h1>
+    <h2 class="role">Your Degree/Major | Your Interest 1 | Your Interest 2</h2>
     <p class="tagline">
-      Write one or two sentences about who you are and what you're learning.
-      Example: "I'm a student learning web development and I enjoy building
-      small projects that solve real problems."
+      One or two sentences about what you're studying and exploring —
+      e.g. "Exploring Web Development, Artificial Intelligence, and Software
+      Engineering through continuous learning and practical projects."
     </p>
     <div class="hero-buttons">
-      <a href="#projects" class="btn primary">See my work</a>
-      <a href="#contact" class="btn secondary">Contact me</a>
+      <a href="resume.pdf" class="btn primary">Download Resume</a>
+      <a href="#projects" class="btn secondary">View Projects</a>
+      <a href="https://github.com/Azhar3302" target="_blank" class="btn secondary">GitHub</a>
     </div>
-  </section>
+
+    <div class="info-cards">
+      <div class="info-card">
+        <span class="label">University</span>
+        <span class="value">Your Institution Name</span>
+      </div>
+      <div class="info-card">
+        <span class="label">Focus Areas</span>
+        <span class="value">Web • AI • CP</span>
+      </div>
+      <div class="info-card">
+        <span class="label">Graduation</span>
+        <span class="value">Expected Year</span>
+      </div>
+    </div>
+  </header>
 
   <section class="about" id="about">
     <h3 class="section-title">About Me</h3>
-    <div class="about-content">
-      <div class="about-photo">
-        <div class="photo-placeholder">Add<br>Photo</div>
-      </div>
-      <div class="about-text">
-        <p>
-          Replace this paragraph with a short introduction: where you study,
-          what you're interested in, and what you hope to build or achieve.
-        </p>
-        <ul class="about-facts">
-          <li><strong>Institution:</strong> Your school / college name</li>
-          <li><strong>Interests:</strong> e.g. Web development, AI, Design</li>
-          <li><strong>Location:</strong> Your city, country</li>
-        </ul>
+    <p>
+      I am a student studying [your field] at [your institution], [country].
+      I chose this field because [your reason — e.g. it connects theory and
+      practical problem-solving].
+    </p>
+    <p>
+      My main interests include [interest 1], [interest 2], and [interest 3].
+      I enjoy [what you enjoy doing — e.g. solving problems, building
+      projects, learning new tools].
+    </p>
+    <p>
+      My long-term goal is to [your goal — e.g. contribute to software
+      development, AI research, or a specific industry].
+    </p>
+
+    <div class="currently">
+      <h4>Currently</h4>
+      <ul>
+        <li><strong>Studying:</strong> Topic you're learning now</li>
+        <li><strong>Building:</strong> A project you're working on</li>
+        <li><strong>Improving:</strong> A skill you're practicing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="tags-section">
+    <h3 class="section-title">Interests</h3>
+    <div class="tag-list">
+      <span class="tag">Web Development</span>
+      <span class="tag">Artificial Intelligence</span>
+      <span class="tag">Software Engineering</span>
+      <span class="tag">Add your own</span>
+    </div>
+  </section>
+
+  <section class="education">
+    <h3 class="section-title">Education</h3>
+    <div class="edu-item">
+      <span class="edu-year">2024 — Present</span>
+      <div>
+        <h4>Your Degree Name</h4>
+        <p>Your Institution Name</p>
+        <p class="muted">Expected Graduation: Year</p>
       </div>
     </div>
   </section>
 
   <section class="skills" id="skills">
     <h3 class="section-title">Skills</h3>
-    <div class="skills-grid">
-      <div class="skill-card">HTML</div>
-      <div class="skill-card">CSS</div>
-      <div class="skill-card">JavaScript</div>
-      <div class="skill-card">Git &amp; GitHub</div>
-      <div class="skill-card">Add your own</div>
-      <div class="skill-card">Add your own</div>
+
+    <div class="skill-group">
+      <h4>Programming</h4>
+      <div class="tag-list">
+        <span class="tag">C++</span>
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Web</h4>
+      <div class="tag-list">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">Tailwind CSS</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Tools</h4>
+      <div class="tag-list">
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Linux</span>
+      </div>
     </div>
   </section>
 
   <section class="projects" id="projects">
     <h3 class="section-title">Projects</h3>
     <div class="projects-grid">
+
       <div class="project-card">
-        <h4>Project One</h4>
-        <p>Short description of the project — what it does and what you used to build it.</p>
-        <a href="#" target="_blank">View project &rarr;</a>
+        <span class="project-tag">Featured Project</span>
+        <h4>Project Name</h4>
+        <p>Short description of what this project does and why you built it.</p>
+        <div class="tag-list small">
+          <span class="tag">Tech 1</span>
+          <span class="tag">Tech 2</span>
+        </div>
+        <a href="#" target="_blank">GitHub ↗</a>
       </div>
+
       <div class="project-card">
-        <h4>Project Two</h4>
-        <p>Short description of the project — what it does and what you used to build it.</p>
-        <a href="#" target="_blank">View project &rarr;</a>
+        <span class="project-tag">Utility</span>
+        <h4>Project Name</h4>
+        <p>Short description of what this project does and why you built it.</p>
+        <div class="tag-list small">
+          <span class="tag">Tech 1</span>
+          <span class="tag">Tech 2</span>
+        </div>
+        <a href="#" target="_blank">GitHub ↗</a>
       </div>
+
       <div class="project-card">
-        <h4>Project Three</h4>
-        <p>Short description of the project — what it does and what you used to build it.</p>
-        <a href="#" target="_blank">View project &rarr;</a>
+        <span class="project-tag">Web Project</span>
+        <h4>Project Name</h4>
+        <p>Short description of what this project does and why you built it.</p>
+        <div class="tag-list small">
+          <span class="tag">Tech 1</span>
+          <span class="tag">Tech 2</span>
+        </div>
+        <a href="#" target="_blank">GitHub ↗</a>
       </div>
+
     </div>
   </section>
 
   <section class="contact" id="contact">
-    <h3 class="section-title">Get In Touch</h3>
-    <p>Feel free to reach out — I'm open to opportunities and collaboration.</p>
-    <div class="contact-links">
-      <a href="mailto:youremail@example.com">Email</a>
-      <a href="https://github.com/Azhar3302" target="_blank">GitHub</a>
-      <a href="#" target="_blank">LinkedIn</a>
+    <h3 class="section-title">Contact</h3>
+    <div class="contact-grid">
+      <a href="mailto:youremail@example.com">
+        <span class="label">Email</span>
+        <span class="value">youremail@example.com</span>
+      </a>
+      <a href="https://github.com/Azhar3302" target="_blank">
+        <span class="label">GitHub</span>
+        <span class="value">github.com/Azhar3302</span>
+      </a>
+      <div>
+        <span class="label">Location</span>
+        <span class="value">Your Country</span>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; <span id="year"></span> Your Full Name Here. Built with HTML &amp; CSS.</p>
+    <p>&copy; <span id="year"></span> Your Full Name Here</p>
   </footer>
 
   <script>
