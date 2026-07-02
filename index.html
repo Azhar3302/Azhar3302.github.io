@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Azharul Islam —  Bsc in ICT| Interest 1 | Interest 2." />
+<meta name="description" content="Azharul Islam — BSc in ICT student | Competitive Programmer | AI Enthusiast." />
 <meta name="theme-color" content="#0b1220" />
-<title>Your Full Name — Portfolio</title>
+<title>Azharul Islam — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -91,13 +91,11 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
   width:42px; height:42px; border-radius:50%;
   border:1px solid var(--line); background: var(--panel);
   cursor:pointer; display:grid; place-items:center;
+  color: var(--accent);
+  transition: transform .2s ease, color .2s ease;
 }
-.toggle-dot{
-  width:18px; height:18px; border-radius:50%;
-  background: linear-gradient(90deg, var(--accent) 50%, transparent 50%);
-  border: 1.5px solid var(--ink);
-  display:block;
-}
+.theme-toggle:hover{ transform: scale(1.06); }
+.theme-toggle svg{ width:20px; height:20px; display:block; }
 .menu-toggle{
   width:42px; height:42px; border-radius:50%;
   border:1px solid var(--line); background: var(--panel); color: var(--ink);
@@ -215,7 +213,7 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
 
   <header class="site-header" id="top">
     <div class="wrap nav-wrap">
-      <a class="brand" href="#home">Your Full Name</a>
+      <a class="brand" href="#home">Azharul Islam</a>
 
       <nav class="nav" id="nav">
         <a href="#about" class="active">About</a>
@@ -226,9 +224,7 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
       </nav>
 
       <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Change theme">
-          <span class="toggle-dot"></span>
-        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Change theme"></button>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">&#8801;</button>
       </div>
     </div>
@@ -242,8 +238,8 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
 
         <div class="hero-copy fade-up">
           <p class="tag-line">Academic Portfolio</p>
-          <h1>Your Full Name</h1>
-          <p class="role">Your Degree Student &nbsp;|&nbsp; Interest 1 &nbsp;|&nbsp; Interest 2</p>
+          <h1>Azharul Islam</h1>
+          <p class="role">BSc in ICT Student &nbsp;|&nbsp; Competitive Programmer &nbsp;|&nbsp; AI Enthusiast</p>
           <p class="pitch">
             Write a short pitch here — what you're exploring and building.
             Example: "Exploring web development and artificial intelligence,
@@ -259,7 +255,7 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
           <div class="fact-row">
             <div class="fact">
               <span class="fact-label">University</span>
-              <span class="fact-value">Your Institution</span>
+              <span class="fact-value">MBSTU</span>
             </div>
             <div class="fact">
               <span class="fact-label">Focus Areas</span>
@@ -273,7 +269,7 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
         </div>
 
         <div class="hero-photo fade-up">
-          <img src="profile.jpg" alt="Portrait of Your Full Name" />
+          <img src="profile.jpg" alt="Portrait of Azharul Islam" />
         </div>
 
       </div>
@@ -285,9 +281,9 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
         <h2 class="section-title fade-up">About</h2>
         <div class="split">
           <div class="panel fade-up">
-            <p>I am a student studying [your field] at [your institution], [country].</p>
+            <p>I am a student studying [your field] at MBSTU, [country].</p>
             <p>I chose this field because [your reason — e.g. it lets me combine problem-solving with building real things].</p>
-            <p>My main interests include [interest 1], [interest 2], and [interest 3]. I enjoy [what you enjoy doing].</p>
+            <p>My main interests include Competitive Programming, Artificial Intelligence, and [interest 3]. I enjoy [what you enjoy doing].</p>
             <p>My long-term goal is to [your goal — career direction, industry, or research area].</p>
           </div>
           <aside class="panel side-panel fade-up">
@@ -301,7 +297,7 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
             <div class="pill-row">
               <span class="pill">Web Development</span>
               <span class="pill">Artificial Intelligence</span>
-              <span class="pill">Add your own</span>
+              <span class="pill">Competitive Programming</span>
             </div>
           </aside>
         </div>
@@ -315,7 +311,7 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
         <div class="panel timeline-row fade-up">
           <span class="timeline-year">2024 &mdash; Present</span>
           <div>
-            <h3>Your Degree Name</h3>
+            <h3>BSc in ICT</h3>
             <p class="muted">MBSTU</p>
             <p class="muted">Expected Graduation: Year</p>
           </div>
@@ -399,7 +395,7 @@ h1, h2, h3{ font-family: "Fraunces", Georgia, serif; margin: 0; }
 
   <footer class="footer">
     <div class="wrap footer-row">
-      <p>&copy; <span id="year"></span> Your Full Name</p>
+      <p>&copy; <span id="year"></span> Azharul Islam</p>
     </div>
   </footer>
 
@@ -416,10 +412,20 @@ const yearSpan = document.getElementById("year");
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
 const THEMES = ["navy", "paper", "sunset", "slate"];
+
+// One clear icon per theme, so the button always shows what it will switch TO next.
+const ICONS = {
+  navy:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>', // moon
+  paper:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/></svg>', // sun
+  sunset: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17.5a8 8 0 0 1 16 0"/><path d="M2.5 17.5h19M8 12.5V6M16 12.5V6M6 8.5 8 6l2 2M18 8.5 16 6l-2 2"/></svg>', // horizon
+  slate:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg>' // half-tone
+};
+
 function applyTheme(theme) {
   if (!THEMES.includes(theme)) theme = "navy";
   root.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
+  if (themeToggle) themeToggle.innerHTML = ICONS[theme];
 }
 applyTheme(localStorage.getItem("theme") || "navy");
 
