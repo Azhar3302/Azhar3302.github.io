@@ -82,6 +82,19 @@ h1, h2, h3{ font-family: "Source Serif 4", Georgia, serif; margin: 0; }
 .btn-fill{ background: var(--accent); color:#fff; }
 .btn-line{ background: transparent; border-color: var(--line); color: var(--ink); }
 
+.hero-side{ display:flex; flex-direction:column; gap:20px; }
+.portrait{
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent);
+  box-shadow: var(--shadow);
+  background: var(--panel);
+}
+.portrait img{ width:100%; height:100%; object-fit:cover; display:block; }
 .hero-facts{ display:grid; gap:14px; }
 .fact{ background: var(--panel); border:1px solid var(--line); border-radius: var(--radius); padding:16px 18px; box-shadow: var(--shadow); display:flex; flex-direction:column; gap:2px; }
 .fact-num{ color: var(--accent-2); font-weight:700; font-size:.8rem; }
