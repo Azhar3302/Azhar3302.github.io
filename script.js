@@ -2,6 +2,7 @@
 // Portfolio Website Script
 // ===============================
 const root = document.documentElement;
+const themeToggle = document.getElementById("themeToggle");
 const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
 const toTop = document.getElementById("toTop");
@@ -12,27 +13,26 @@ if (yearSpan) {
 }
 
 // ===============================
-// THEME (4 options: terminal / paper / sunset / slate)
-// default = terminal
+// THEME (default = navy)
+// Click cycles through 4 palettes: navy -> paper -> sunset -> slate
 // ===============================
-const THEMES = ["terminal", "paper", "sunset", "slate"];
-const themeSwatches = document.querySelectorAll(".swatch");
+const THEMES = ["navy", "paper", "sunset", "slate"];
 
 function applyTheme(theme) {
-  if (!THEMES.includes(theme)) theme = "terminal";
+  if (!THEMES.includes(theme)) theme = "navy";
   root.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
-  themeSwatches.forEach(sw => {
-    sw.classList.toggle("is-active", sw.dataset.theme === theme);
-  });
 }
 
-const storedTheme = localStorage.getItem("theme");
-applyTheme(storedTheme || "terminal");
+applyTheme(localStorage.getItem("theme") || "navy");
 
-themeSwatches.forEach(sw => {
-  sw.addEventListener("click", () => applyTheme(sw.dataset.theme));
-});
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme") || "navy";
+    const next = THEMES[(THEMES.indexOf(current) + 1) % THEMES.length];
+    applyTheme(next);
+  });
+}
 
 // ===============================
 // MOBILE MENU
