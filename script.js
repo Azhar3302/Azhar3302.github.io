@@ -2,7 +2,6 @@
 // Portfolio Website Script
 // ===============================
 const root = document.documentElement;
-const themeToggle = document.getElementById("themeToggle");
 const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
 const toTop = document.getElementById("toTop");
@@ -13,35 +12,41 @@ if (yearSpan) {
 }
 
 // ===============================
-// THEME (default = light)
+// THEME (4 options: terminal / paper / sunset / slate)
+// default = terminal
 // ===============================
-const storedTheme = localStorage.getItem("theme");
-if (storedTheme === "dark") {
-  root.dataset.theme = "dark";
+const THEMES = ["terminal", "paper", "sunset", "slate"];
+const themeSwatches = document.querySelectorAll(".swatch");
+
+function applyTheme(theme) {
+  if (!THEMES.includes(theme)) theme = "terminal";
+  root.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  themeSwatches.forEach(sw => {
+    sw.classList.toggle("is-active", sw.dataset.theme === theme);
+  });
 }
 
-themeToggle.addEventListener("click", () => {
-  if (root.dataset.theme === "dark") {
-    delete root.dataset.theme;
-    localStorage.setItem("theme", "light");
-  } else {
-    root.dataset.theme = "dark";
-    localStorage.setItem("theme", "dark");
-  }
+const storedTheme = localStorage.getItem("theme");
+applyTheme(storedTheme || "terminal");
+
+themeSwatches.forEach(sw => {
+  sw.addEventListener("click", () => applyTheme(sw.dataset.theme));
 });
 
 // ===============================
 // MOBILE MENU
 // ===============================
-menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("open");
-});
-
-nav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
   });
-});
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+    });
+  });
+}
 
 // ===============================
 // SCROLL REVEAL
@@ -63,29 +68,27 @@ revealItems.forEach(item => observer.observe(item));
 // SCROLL SPY + BACK TO TOP
 // ===============================
 const sections = document.querySelectorAll("section[id]");
-const navLinks = nav.querySelectorAll("a");
+const navLinks = nav ? nav.querySelectorAll("a") : [];
 
 function scrollSpy() {
   const scrollPosition = window.scrollY + 110;
-
   sections.forEach(section => {
     const top = section.offsetTop;
     const bottom = top + section.offsetHeight;
     const id = section.getAttribute("id");
-
     if (scrollPosition >= top && scrollPosition < bottom) {
       navLinks.forEach(link => {
         link.classList.toggle("active", link.getAttribute("href") === "#" + id);
       });
     }
   });
-
-  if (window.scrollY > 450) {
-    toTop.classList.add("show");
-  } else {
-    toTop.classList.remove("show");
+  if (toTop) {
+    if (window.scrollY > 450) {
+      toTop.classList.add("show");
+    } else {
+      toTop.classList.remove("show");
+    }
   }
 }
-
 window.addEventListener("scroll", scrollSpy, { passive: true });
 scrollSpy();
